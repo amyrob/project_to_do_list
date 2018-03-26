@@ -2,13 +2,14 @@ package com.example.amy.to_do_list;
 
 import android.content.Context;
 import android.database.sqlite.*;
+import android.os.Bundle;
 
 /**
  * Created by Amy on 26/03/2018.
  */
 
 public class DbHelper extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "todolist.db";
 
     public DbHelper(Context context) {

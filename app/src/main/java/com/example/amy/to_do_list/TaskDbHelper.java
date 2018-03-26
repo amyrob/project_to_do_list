@@ -21,10 +21,11 @@ public class TaskDbHelper extends DbHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(TaskContract.COLUMN_NAME_TASK, task.taskName);
-        values.put(TaskContract.COLUMN_NAME_COMPLETION_STATUS, task.completion);
+        values.put(TaskContract.COLUMN_NAME_TASK, task.getTaskName());
+        values.put(TaskContract.COLUMN_NAME_COMPLETION_STATUS, task.getCompletionStatus());
 
         db.insert(TaskContract.TABLE_NAME, null, values);
+        db.close();
     }
 
     public List<Task> allTasks() {

@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Task task = new Task("Check Ebay", false);
-
         TaskDbHelper db = new TaskDbHelper(this);
 
         db.save(task);

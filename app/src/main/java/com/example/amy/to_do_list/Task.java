@@ -1,10 +1,12 @@
 package com.example.amy.to_do_list;
 
+import java.io.Serializable;
+
 /**
  * Created by Amy on 26/03/2018.
  */
 
-public class Task {
+public class Task implements Serializable {
     public String taskName;
     public boolean completion;
 

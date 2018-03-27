@@ -62,12 +62,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onNavBarAddClick() {
-        Intent intent = new Intent(this, AddNewActivity.class);
+        Intent intent = new Intent(this, AddTaskActivity.class);
         startActivity(intent);
     }
+}
 
-    }
-
-//        db.save(task);
-//        db.allTasks();
 

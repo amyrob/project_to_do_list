@@ -18,7 +18,7 @@ public class Task implements Serializable {
     }
 
     public String getTaskName() {
-        return this.taskName;
+        return taskName;
     }
 
     public String getDescription() {
@@ -28,5 +28,4 @@ public class Task implements Serializable {
     public boolean getCompletionStatus() {
         return this.completion;
     }
-
 }

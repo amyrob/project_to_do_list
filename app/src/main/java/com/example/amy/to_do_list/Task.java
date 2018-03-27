@@ -8,15 +8,21 @@ import java.io.Serializable;
 
 public class Task implements Serializable {
     public String taskName;
+    public String description;
     public boolean completion;
 
-    public Task (String taskName, boolean completion) {
+    public Task (String taskName, String description, boolean completion) {
         this.taskName = taskName;
+        this.description = description;
         this.completion = completion;
     }
 
     public String getTaskName() {
         return this.taskName;
+    }
+
+    public String getDescription() {
+        return this.description;
     }
 
     public boolean getCompletionStatus() {

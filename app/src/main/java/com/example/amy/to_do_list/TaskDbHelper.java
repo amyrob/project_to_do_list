@@ -22,6 +22,7 @@ public class TaskDbHelper extends DbHelper {
 
         ContentValues values = new ContentValues();
         values.put(TaskContract.COLUMN_NAME_TASK, task.getTaskName());
+        values.put(TaskContract.COLUMN_NAME_DESCRIPTION, task.getDescription());
         values.put(TaskContract.COLUMN_NAME_COMPLETION_STATUS, task.getCompletionStatus());
 
         db.insert(TaskContract.TABLE_NAME, null, values);

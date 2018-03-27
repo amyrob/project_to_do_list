@@ -11,7 +11,7 @@ public class ToDoList {
 
     public ToDoList() {
         list = new ArrayList<Task>();
-        list.add(new Task ("Put stuff on Ebay", false));
+        list.add(new Task ("Put stuff on Ebay", "Boots, Ski's, Poles", false));
     }
 
     public ArrayList<Task> getList() {

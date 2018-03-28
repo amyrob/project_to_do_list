@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onListItemClick(View listItem) {
         Task selectedTask = (Task) listItem.getTag();
-
+        Log.e("selected task", selectedTask.toString());
         Intent intent = new Intent(this, TaskActivity.class);
         intent.putExtra("task", selectedTask);
         startActivity(intent);
@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.completed_status:
                 if(checked)
                     Toast.makeText(MainActivity.this, "Awesome!", Toast.LENGTH_SHORT).show();
+//                    selectedTask.completedTrue();
+//                TaskDbHelper dbHelper = new TaskDbHelper(this);
+//                dbHelper.update(selectedTask);
         }
     }
 

@@ -13,7 +13,7 @@ import com.example.amy.to_do_list.Db.Contracts.TaskContract;
  */
 
 public class DbHelper extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 9;
     private static final String DATABASE_NAME = "todolist.db";
 
     public DbHelper(Context context) {

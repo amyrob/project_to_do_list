@@ -1,4 +1,6 @@
-package com.example.amy.to_do_list;
+package com.example.amy.to_do_list.Models;
+
+import com.example.amy.to_do_list.Models.Task;
 
 import java.util.ArrayList;
 

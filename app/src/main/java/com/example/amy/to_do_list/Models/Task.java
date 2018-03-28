@@ -1,4 +1,4 @@
-package com.example.amy.to_do_list;
+package com.example.amy.to_do_list.Models;
 
 import java.io.Serializable;
 
@@ -10,11 +10,20 @@ public class Task implements Serializable {
     public String taskName;
     public String description;
     public boolean completion;
+    public Integer ID;
 
     public Task (String taskName, String description, boolean completion) {
         this.taskName = taskName;
         this.description = description;
         this.completion = completion;
+    }
+
+
+    public Task (String taskName, String description, boolean completion, Integer ID) {
+        this.taskName = taskName;
+        this.description = description;
+        this.completion = completion;
+        this.ID = ID;
     }
 
     public String getTaskName() {

@@ -1,13 +1,15 @@
-package com.example.amy.to_do_list;
+package com.example.amy.to_do_list.Activities;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import com.example.amy.to_do_list.R;
+import com.example.amy.to_do_list.Models.Task;
 
 import java.util.ArrayList;
 

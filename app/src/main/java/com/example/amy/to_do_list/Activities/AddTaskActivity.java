@@ -1,4 +1,4 @@
-package com.example.amy.to_do_list;
+package com.example.amy.to_do_list.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.amy.to_do_list.Db.Helpers.TaskDbHelper;
+import com.example.amy.to_do_list.Models.Task;
+import com.example.amy.to_do_list.R;
 
 public class AddTaskActivity extends AppCompatActivity {
     EditText taskName, details;
@@ -19,27 +23,19 @@ public class AddTaskActivity extends AppCompatActivity {
 
         taskName = (EditText) findViewById(R.id.addNewTask);
         details = (EditText) findViewById(R.id.newTaskDetails);
-
-        addButton = (Button) findViewById(R.id.addButton);
-        addButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                onAddButtonClick();
-                Toast.makeText(AddTaskActivity.this, "Task Saved", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
-    public String getTaskName() {
-        return taskName.getText().toString();
-    }
+    public void onAddButtonClick(View view) {
+        String name = taskName.getText().toString();
+        String description = details.getText().toString();
 
-    public String getDescription() {
-        return details.getText().toString();
-    }
+        Task task = new Task(name, description, false);
 
-    public void onAddButtonClick() {
+        TaskDbHelper dbHelper = new TaskDbHelper(this);
+        dbHelper.save(task);
+
+        Toast.makeText(AddTaskActivity.this, "Task Saved", Toast.LENGTH_SHORT).show();
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.amy.to_do_list.AddTaskActivity">
+    tools:context="com.example.amy.to_do_list.Activities.AddTaskActivity">
 
 
     <LinearLayout
@@ -60,6 +60,7 @@
             android:id="@+id/addButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onAddButtonClick"
             android:text="Add Task" />
     </LinearLayout>
 </RelativeLayout>

@@ -7,8 +7,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-
-import com.example.amy.to_do_list.Activities.AddTaskActivity;
 import com.example.amy.to_do_list.Db.Contracts.TaskContract;
 import com.example.amy.to_do_list.Models.Task;
 
@@ -29,9 +27,16 @@ public class TaskDbHelper extends DbHelper {
 
         long result = db.insert(TaskContract.TABLE_NAME, null, values);
 
-        Log.e("blah", "Result: " + result);
-
         db.close();
+    }
+
+    public void delete(Task task) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String selection = TaskContract.COLUMN_NAME_TASK + " LIKE ?";
+        String[] selectionArgs = { task.getTaskName() };
+
+        db.delete(TaskContract.TABLE_NAME, selection, selectionArgs);
     }
 
         public ArrayList<Task> allTasks() {

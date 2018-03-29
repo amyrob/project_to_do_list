@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCheckBoxClick(View checkBox) {
-        Task selectedTask = (Task) checkBox.getTag();
         boolean checked = ((CheckBox)checkBox).isChecked();
         switch(checkBox.getId()) {
             case R.id.completed_status:
